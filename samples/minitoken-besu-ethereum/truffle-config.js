@@ -18,15 +18,13 @@
  *
  */
 
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-var mnemonic =
-  "math razor capable expose worth grape metal sunset metal sudden usage scheme";
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+// var mnemonic = "math razor capable expose worth grape metal sunset metal sudden usage scheme";
+var mnemonic = "private desert repeat shaft select during blood vault panda shoot shaft clutch";
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
-
-const contract_dir = "./../../contracts/minitoken/solidity";
 
 module.exports = {
   /**
@@ -38,34 +36,59 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-  contracts_directory: contract_dir,
-  contracts_build_directory: contract_dir + "/build/contracts",
-  migrations_directory: contract_dir + "/migrations",
 
   networks: {
-    ibc0: {
-      host: "127.0.0.1", // Localhost (default: none)
-      port: 8645, // Standard Ethereum port (default: none)
-      network_id: "*", // Any network (default: none)
-      networkCheckTimeout: 10000,
+    // Useful for testing. The `development` name is special - truffle uses it by default
+    // if it's defined here and no other network is specified at the command line.
+    // You should run a client (like ganache-cli, geth or parity) in a separate terminal
+    // tab if you use this network and you must also set the `host`, `port` and `network_id`
+    // options below to some value.
+    //
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      //  gas: 100000000,
       provider: () =>
-        new HDWalletProvider({
-          mnemonic: {
-            phrase: mnemonic,
-          },
-          providerOrUrl: "http://localhost:8645",
-          addressIndex: 0,
-          numberOfAddresses: 10,
-          pollingInterval: 8000, // Reducing socket hang up error
-        }),
+          new HDWalletProvider(mnemonic, "http://localhost:8545", 0, 10)
     },
-    ibc1: {
-      host: "127.0.0.1", // Localhost (default: none)
-      port: 8745, // Standard Ethereum port (default: none)
-      network_id: "*", // Any network (default: none)
+    testchain0: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8645,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      // gas: 100000000,
       provider: () =>
-        new HDWalletProvider(mnemonic, "http://localhost:8745", 0, 10),
+          new HDWalletProvider(mnemonic, "http://localhost:8645", 0, 10)
     },
+    testchain1: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8745,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      // gas: 100000000,
+      provider: () =>
+          new HDWalletProvider(mnemonic, "http://localhost:8745", 0, 10)
+    },
+    node: {
+      host: "node.lingjingchain.cn",     // Localhost (default: none)
+      // host: "node.lingjingchain.cn",
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "1888",       // Any network (default: none)
+      // gas: 100000000,
+      provider: () =>
+          new HDWalletProvider(mnemonic, "https://node.lingjingchain.cn", 0, 10)
+    },
+    node1: {
+      host: "node1.lingjingchain.cn",     // Localhost (default: none)
+      // host: "https://ibc1.chain.lingjingchain.cn",
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "1889",       // Any network (default: none)
+      // gas: 100000000,
+      networkCheckTimeout: 10000000,
+      pollingInterval: 30000,
+      timeoutBlocks: 40000,
+      provider: () =>
+          new HDWalletProvider(mnemonic, "https://node1.lingjingchain.cn/", 0, 10)
+    }
   },
 
   // Set default mocha options here, use special reporters etc.
@@ -76,18 +99,19 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.9", // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.9",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      settings: {
-        // See the solidity docs for advice about optimization and evmVersion
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
         optimizer: {
           enabled: true,
-          runs: 1000,
+          runs: 1000
         },
         //  evmVersion: "byzantium"
-      },
-    },
+      }
+    }
   },
 
-  plugins: ["truffle-contract-size"],
+  plugins: [
+    'truffle-contract-size'
+  ]
 };
