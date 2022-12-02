@@ -4,24 +4,32 @@ TEST_OPTS ?= --compile-none --migrate-none
 
 # setup
 .PHONY: setup down
-setup: build network sleep migrate handshake relayer-start
+#setup: build network sleep migrate handshake relayer-start
+#down: relayer-stop network-down
 
-down: relayer-stop network-down
+setup: build  sleep migrate
+down: relayer-stop
 
-# build
+.PHONY: start
+start: handshake relayer-start
+# build ,构建合约、构建中继、构建容器（替代自己的链信息）
 .PHONY: build build-contract build-relayer
-build: build-contract build-relayer build-container
+#build: build-contract build-relayer build-container
+build: build-contract build-relayer
 
+# 构建合约
 build-contract:
 	@make -C ../../contracts/minitoken/solidity build
 
+# 构建中继
 build-relayer:
 	@make -C relayer build
 
+# 构建链容器
 build-container:
 	@make -C chains build
 
-# network
+# network 启动和停止容器
 .PHONY: network network-down
 network:
 	@make -C chains network
@@ -29,7 +37,7 @@ network:
 network-down:
 	@make -C chains network-down
 
-# contract migration
+# contract migration 部署合约
 .PHONY: migrate
 migrate:
 	npm run migrate:ibc0

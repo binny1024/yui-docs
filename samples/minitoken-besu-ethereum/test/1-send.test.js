@@ -6,7 +6,7 @@ contract("MiniToken", (accounts) => {
     MiniToken.deployed()
       .then((instance) =>
         instance.getPastEvents("SendTransfer", {
-          filter: { from: accounts[1], to: accounts[2] },
+          filter: { from: accounts[0], to: accounts[1] },
           fromBlock: block,
         })
       )

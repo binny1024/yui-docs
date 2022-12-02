@@ -6,8 +6,8 @@
     "postinstall": "npm run compile:ibc",
     "compile": "truffle compile",
     "compile:ibc": "cd node_modules/@hyperledger-labs/yui-ibc-solidity && truffle compile",
-    "migrate:ibc0": "truffle migrate --network=ibc0 --compile-none",
-    "migrate:ibc1": "truffle migrate --network=ibc1 --compile-none",
+    "migrate:ibc0": "truffle migrate --network=ibc0 --reset --compile-none > ibc0.txt",
+    "migrate:ibc1": "truffle migrate --network=ibc1 --reset  --compile-none > ibc1.txt",
     "fmt": "npx prettier --write 'test/**/*.js' 'truffle-config.js'"
   },
   "author": "Datachain, Inc.",
@@ -24,6 +24,8 @@
     "truffle-contract-size": "^2.0.1"
   },
   "dependencies": {
-    "@hyperledger-labs/yui-ibc-solidity": "git+https://git@github.com/hyperledger-labs/yui-ibc-solidity.git#482544f9ca215f3a239fb814803d5819c9f1602c"
+    "@hyperledger-labs/yui-ibc-solidity": "git+https://git@github.com/hyperledger-labs/yui-ibc-solidity.git#482544f9ca215f3a239fb814803d5819c9f1602c",
+    "ethers": "^5.7.2",
+    "pify": "^5.0.0"
   }
 }

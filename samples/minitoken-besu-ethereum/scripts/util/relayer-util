@@ -3,7 +3,6 @@
 set -eu
 
 source ${SCRIPT_DIR}/util/color
-
 CONF_DIR=${SCRIPT_DIR}/../configs
 DEMO_DIR=${SCRIPT_DIR}/../demo
 FIXTURES_DIR=${DEMO_DIR}/fixtures
@@ -14,8 +13,8 @@ RLY_BINARY=${BIN_DIR}/uly
 RLY="${RLY_BINARY} --home ${RELAYER_CONF}"
 println "Loaded relayer command: $RLY"
 
-CHAINID_ONE=ibc0
-CHAINID_TWO=ibc1
+CHAINID_ONE=ibc0 # 估计是请客户端的 id
+CHAINID_TWO=ibc1 # 估计是请客户端的 id
 RLYKEY=testkey
-PATH_NAME=ibc01
+PATH_NAME=ibc01 # 在生成的 rly 配置文件里
 

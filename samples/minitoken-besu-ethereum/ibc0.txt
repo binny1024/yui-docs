@@ -1,0 +1,280 @@
+
+Compiling your contracts...
+===========================
+> Compilation skipped because --compile-none option was passed.
+
+
+
+Starting migrations...
+======================
+> Network name:    'ibc0'
+> Network id:      1888
+> Block gas limit: 9007199254740991 (0x1fffffffffffff)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x1ee57656d9700ef02ccb6899e81598e4275d75497d4698d912b86e23063c8ef1
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x67408fa0105eA0fA1da9bBCB47d9a10cAAbeA02e
+   > block number:        678216
+   > block timestamp:     1669952265
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            170942 (0x29bbe)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+
+2_token_migration.js
+====================
+
+   Replacing 'IBCIdentifier'
+   -------------------------
+   > transaction hash:    0xfb3daeb6a5514c3179b767b2e16a9733dc49c13a49ea3c9f73c1504a3a9c0d6d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xfDbA390c734573DDa96f5D415db3605dFD4Cb1E8
+   > block number:        678220
+   > block timestamp:     1669952273
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            803697 (0xc4371)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Linking
+   -------
+   * Contract: IBCHost <--> Library: IBCIdentifier (at address: 0xfDbA390c734573DDa96f5D415db3605dFD4Cb1E8)
+
+   Linking
+   -------
+   * Contract: IBCHandler <--> Library: IBCIdentifier (at address: 0xfDbA390c734573DDa96f5D415db3605dFD4Cb1E8)
+
+   Replacing 'IBCMsgs'
+   -------------------
+   > transaction hash:    0x09e296dc9b9c1f21c99b1c3cf0f6a2445dd4cc4248d7806584613b892b7a124f
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xEF025E6A716FF24B6454724d6733c5eEceFa19d6
+   > block number:        678222
+   > block timestamp:     1669952277
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            72217 (0x11a19)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Replacing 'IBCClient'
+   ---------------------
+   > transaction hash:    0x59416d85c6a3ebcafe4dc5c6346a6f7fcff6d241833085982e1b91bfbd4b84a1
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x50b8350C7364783E5e02cc738a6e9610fA8F338a
+   > block number:        678224
+   > block timestamp:     1669952281
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            1121556 (0x111d14)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Linking
+   -------
+   * Contract: IBCHandler <--> Library: IBCClient (at address: 0x50b8350C7364783E5e02cc738a6e9610fA8F338a)
+
+   Linking
+   -------
+   * Contract: IBCConnection <--> Library: IBCClient (at address: 0x50b8350C7364783E5e02cc738a6e9610fA8F338a)
+
+   Linking
+   -------
+   * Contract: IBCChannel <--> Library: IBCClient (at address: 0x50b8350C7364783E5e02cc738a6e9610fA8F338a)
+
+   Replacing 'IBCConnection'
+   -------------------------
+   > transaction hash:    0xe2b2f95f99ec9e6ba0456148203bc5397197a901f156fd7b33de4fc8159482c0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xc5b6e7813D2318E28AB10BB5678Dd98A21cD8857
+   > block number:        678226
+   > block timestamp:     1669952285
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            3397273 (0x33d699)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Linking
+   -------
+   * Contract: IBCHandler <--> Library: IBCConnection (at address: 0xc5b6e7813D2318E28AB10BB5678Dd98A21cD8857)
+
+   Linking
+   -------
+   * Contract: IBCChannel <--> Library: IBCConnection (at address: 0xc5b6e7813D2318E28AB10BB5678Dd98A21cD8857)
+
+   Replacing 'IBCChannel'
+   ----------------------
+   > transaction hash:    0xb6a42344f529fbf87653417745cf41c7d0a182d0091112e5704fd0ded70bd1ed
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x16160B09B731759c3001cbfc5F4e3d704691A794
+   > block number:        678228
+   > block timestamp:     1669952289
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            5304494 (0x50f0ae)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Linking
+   -------
+   * Contract: IBCHandler <--> Library: IBCChannel (at address: 0x16160B09B731759c3001cbfc5F4e3d704691A794)
+
+   Replacing 'MockClient'
+   ----------------------
+   > transaction hash:    0x0a38b7e8a0520237be0a1ad9dba57c634ffd668bd97d1ef4eb6fe840773e0e92
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x036ee65Ac41A2eB9F962ED82C65f31deE33b06C7
+   > block number:        678231
+   > block timestamp:     1669952295
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            2440174 (0x253bee)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Replacing 'IBCHost'
+   -------------------
+   > transaction hash:    0xd65af6e059d3c397afbc8feaa919d434f51d23f501290eac49234c2363698ca2
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xFBA7D415d88C824B8Aef0B8194C7D5306CCfbEAD
+   > block number:        678233
+   > block timestamp:     1669952299
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            4544754 (0x4558f2)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Replacing 'IBCHandler'
+   ----------------------
+   > transaction hash:    0x022559e713a718ceab1e3391598b79c9ca707bf69640464424539998c3c2bdd4
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x3848750718E1E8b50164102DD1F3B8859eA7d649
+   > block number:        678236
+   > block timestamp:     1669952305
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            3406446 (0x33fa6e)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+
+   Replacing 'MiniToken'
+   ---------------------
+   > transaction hash:    0x056625b86055c078e572a6d0c657ebb69389ca25fa9a245ed7fe543ae6fed89a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xb6D9088c6224690d672CffeD75bcc2c710a1cacC
+   > block number:        678238
+   > block timestamp:     1669952309
+   > account:             0xCF5F1f9dAcdBF9D32ed368c8cC4cdc5Fc675A8F4
+   > balance:             898925.954938956
+   > gas used:            2009568 (0x1ea9e0)
+   > gas price:           0 gwei
+   > value sent:          0 ETH
+   > total cost:          0 ETH
+
+{
+  tx: '0x6b01c0a2ceb3d30d0232c3b48d354d6e6150cb71df697f301adfb2b74089553e',
+  receipt: {
+    blockHash: '0x7db17dccbbe0cf358ea6f743c11aca400e2e4f27e77436b4965ab790e8160720',
+    blockNumber: 678240,
+    contractAddress: null,
+    cumulativeGasUsed: 46144,
+    from: '0xcf5f1f9dacdbf9d32ed368c8cc4cdc5fc675a8f4',
+    gasUsed: 46144,
+    effectiveGasPrice: '0x0',
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    to: '0xfba7d415d88c824b8aef0b8194c7d5306ccfbead',
+    transactionHash: '0x6b01c0a2ceb3d30d0232c3b48d354d6e6150cb71df697f301adfb2b74089553e',
+    transactionIndex: 0,
+    rawLogs: []
+  },
+  logs: []
+}
+{
+  tx: '0xf78e80e0b76621185e287dbb7e75bdf6a899112ec09843cd147f59175b6d104b',
+  receipt: {
+    blockHash: '0xd61a0f8994a5c30b36da05e662f9a23935b4a527f39450815d0d679008cd68f5',
+    blockNumber: 678241,
+    contractAddress: null,
+    cumulativeGasUsed: 82664,
+    from: '0xcf5f1f9dacdbf9d32ed368c8cc4cdc5fc675a8f4',
+    gasUsed: 82664,
+    effectiveGasPrice: '0x0',
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    to: '0x3848750718e1e8b50164102dd1f3b8859ea7d649',
+    transactionHash: '0xf78e80e0b76621185e287dbb7e75bdf6a899112ec09843cd147f59175b6d104b',
+    transactionIndex: 0,
+    rawLogs: []
+  },
+  logs: []
+}
+{
+  tx: '0x535b15a2a18ebbf18f4c7962906c858356f2c1cacbc8d3cf6671068dca4be2b2',
+  receipt: {
+    blockHash: '0xfbb0829337a42f1b25d39e3bde019fb2a4251f6d8b5315baacc7068554f697ba',
+    blockNumber: 678242,
+    contractAddress: null,
+    cumulativeGasUsed: 60281,
+    from: '0xcf5f1f9dacdbf9d32ed368c8cc4cdc5fc675a8f4',
+    gasUsed: 60281,
+    effectiveGasPrice: '0x0',
+    logs: [],
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+    status: true,
+    to: '0x3848750718e1e8b50164102dd1f3b8859ea7d649',
+    transactionHash: '0x535b15a2a18ebbf18f4c7962906c858356f2c1cacbc8d3cf6671068dca4be2b2',
+    transactionIndex: 0,
+    rawLogs: []
+  },
+  logs: []
+}
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+
+Summary
+=======
+> Total deployments:   10
+> Final cost:          0 ETH
+
+
